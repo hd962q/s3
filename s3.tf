@@ -26,7 +26,7 @@ resource "aws_s3_bucket_object" "object" {
 
   acl    = "private"  # or can be "public-read"
 
-  source = "var/www/html/resetPassword.php"
+  source = "/root/reset.pi"
 
 } 
  
