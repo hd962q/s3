@@ -18,5 +18,15 @@ resource "aws_s3_bucket" "myterraform-bucket1" {
     Name        = "My bucket"
   }
 }
-  
+resource "aws_s3_bucket_object" "object" {
+
+  bucket = aws_s3_bucket.myterraform-bucket1.id
+
+  key    = "file"
+
+  acl    = "private"  # or can be "public-read"
+
+  source = "Desktop/Deliverable TU Cloud Platform Backlog.doc"
+
+} 
  
